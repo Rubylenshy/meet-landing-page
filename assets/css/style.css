@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+    /* primary */
+    --dark-cyan: hsla(192, 37%, 48%, 1);
+    --dark-violet: hsla(268, 34%, 53%, 1);
+    /* secondary */
+    --light-cyan: hsla(192, 90%, 77%, 1);
+    --light-violet: hsla(268, 100%, 86%, 1);
+    --fw-bold: 400;
+    /* neutral */
+    --black: rgb(55, 55, 82);
+    --gray: hsla(240, 10%, 57%, 1);
+    --light-gray: hsla(240, 10%, 57%, 0.25);
+    --white: hsla(0, 0%, 98%, 1);
+    /* buttom hover */
+    --cyan-hover: hsla(192, 54%, 64%, 1);
+    --violet-hover: hsla(268, 55%, 71%, 1);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Red Hat Display', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+body{
+    padding: 4em 0 0;
+}
+p{
+    font-weight: 600;
+}
+button{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.05em;
+    cursor: pointer;
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: none;
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo img:nth-child(1){
+    margin-right: 10px;
+    animation: spin 1s infinite;
+}
+.logo img:nth-child(1):hover{
+    animation: none;
+}
+
+
+/* Illustration Hero */
+
+.hero-desktop img{
+    display: none;
+}
+
+.hero-mobile{
+    display: flex;
+    justify-content: center;
+    margin: 4em auto;
+    max-width: 100%;
+}
+.hero-desktop{
+    margin: 0 0 4em;
+}
+.hero-text{
+    text-align: center;
+}
+.primary-title{
+    font-weight: 900;
+}
+.primary-title span{
+    background: linear-gradient(to right, 
+    var(--dark-violet),
+    var(--black),
+    var(--dark-cyan),
+    var(--light-cyan) );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: glow s infinite;
+}
+.hero-paragraph{
+    margin: 2em auto;
+    width: 80%;
+    color: var(--gray);
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+}
+.btn:hover,
+.btn:focus{
+    opacity: 0.8;
+}
+.btn-1{
+    background: var(--dark-cyan);
+    color: var(--white);
+}
+.btn-1 span{
+    color: var(--light-cyan);
+}
+.btn-2{
+    background: var(--dark-violet);
+    color: var(--light-violet);
+}
+
+/* Section One/Gallery */
+
+.section-one{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto 3em;
+}
+.line{
+    height: 4em;
+    width: 1px;
+    background: var(--gray);
+    border: none;
+}
+.circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    background: var(--white);
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    margin: 0 1em 4em;
+}
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.gallery-container img{
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.paragraph-text{
+    margin: 3em auto 8em;
+    text-align: center;
+    padding: 1em;
+}
+.primary-heading{
+    font-size: 1.15em;
+    color: var(--dark-cyan);
+    font-weight: 700;
+}
+.secondary-heading{
+    font-size: 2.15em;
+    margin: 0.8em 0;
+}
+.primary-p{
+    color: var(--gray);
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Footer */
+.section-two{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto -1.8em;
+    z-index: 2;
+    position: relative;
+}
+.footer{
+    position: relative;
+    z-index: 1;
+    height: 28em;
+    width: 100%;
+    background: var(--dark-cyan);
+}
+.footer::before{
+    content: "";
+    background: url(../images/image-footer-mobile.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    opacity: 0.2;
+    z-index: -5;
+}
+.footer-wrapper{
+    padding: 5em 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-heading{
+    text-align: center;
+    font-size: 2.15em;
+    color: var(--white);
+}
+.footer-text{
+    text-align: center;
+    max-width: 300px;
+    margin: 2em 0;
+    color: var(--white);
+}
+.btn-footer{
+    background: var(--dark-violet);
+    color: var(--white);
+}
+.btn-footer span{
+    color: var(--light-violet);
+}
+
+
+@media (min-width: 950px) {
+    .illustration-hero{
+        margin: 4em auto;
+    }
+    .hero-desktop{
+        display: flex;
+    }
+    .hero-desktop img{
+        display: initial;
+        height: 100%;
+        min-width: 200px;
+    }
+    .hero-desktop img:nth-child(1){
+        margin-left: -1.5em;
+    }
+    .hero-desktop img:nth-child(2){
+        margin-right: -1.5em;
+    }
+    .hero-mobile{
+        display: none;
+    }
+    .primary-title{
+        font-size: 2.55em;
+    }
+
+    .gallery-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer{
+        height: 18em;
+    }
+    .footer::before{
+        background: url(../images/image-footer.jpg);
+        background-size: cover;
+    }
+    .footer-wrapper{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5em 8%;
+        max-width: 1500px;
+    }
+    .footer-heading,
+    .footer-text{
+        text-align: left;
+    }
+}
+
+/* @keyframes slide-left {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);            
+    }
+}
+@keyframes slide-right {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+      transform: translateX(-100%);            
+    }
+} */
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* @keyframes glow {
+    from{
+        background: linear-gradient(to right, var(--light-cyan), var(--dark-cyan),var(--black),var(--dark-violet) );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    to{
+        background: linear-gradient(to right,  var(--dark-violet) var(--black),var(--dark-cyan),var(--light-cyan) );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+} */
