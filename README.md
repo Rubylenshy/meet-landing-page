@@ -19,7 +19,7 @@ Thanks for checking out this front-end coding challenge.
 
 ### Links
 
-- Live Site URL: [Meet Landing Page]()
+- Live Site URL: [Meet Landing Page](https://rubylenshy.github.io/meet-landing-page/)
 
 ## Author
 
