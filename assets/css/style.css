@@ -53,6 +53,7 @@ button{
 .logo img:nth-child(1){
     margin-right: 10px;
     animation: spin 1s infinite;
+    animation-delay: 3s;
 }
 .logo img:nth-child(1):hover{
     animation: none;
